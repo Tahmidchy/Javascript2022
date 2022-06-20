@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy Javascript & Jquery Testing </title>
+     <!-- External Javascript Link Code-->
+     <script src="\My work\JavaScript testing by umdy\Javascript-22\Javascript Day-2\js\Script1.js"></script>
+     <!-- External Jquery Link Code -->
+     <script src="\My work\JavaScript testing by umdy\Javascript-22\Javascript Day-2\jquery\jquery.js"></script>
+      <!-- External Jquery color Link-->
+    <script src="\My work\JavaScript testing by umdy\Javascript-22\Javascript Day-2\jquery\jquery.color.js"></script>
+     <!-- Inline Jquery-->
+     <script>
+        $(document).ready(function(){
+            $(".btn1").click(function(){
+              $("p").fadeOut();
+            });
+            $(".btn2").click(function(){
+              $("p").fadeIn();
+            });
+          });
+        
+     </script>
+     <script type="text/javascript">
+
+       /* $(document).ready(function(){
+
+            $("button").click(function(){
+            
+            $("div").text("Welcome to Tutlane");
+            
+            })
+            
+            });*/
+
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("div").text("Welcome to Jquery");
+                })
+
+            });
+     </script>
+     <!-- Mouse Event inline Jquery start-->
+     <!-- Mouse Event Jquery single click start-->
+     <script>
+      /*$(document).ready(function(){
+        $("p").click(function(){
+          $(this).hide();
+        });
+      });*/
+      $(document).ready(function(){
+        $("p").click(function(){
+          $(this).hide();
+        });
+      });
+     </script>
+      <!-- Mouse Event Jquery Double click start-->
+     <script>
+      $(document).ready(function(){
+        $("p").dblclick(function(){
+          $(this).hide();
+        });
+      });
+     </script>
+     <!-- Mouse Event Jquery enter event start-->
+     <script>
+      $(document).ready(function(){
+        $("#p1").mouseenter(function(){
+          alert("You entered p1");
+        });
+      });
+     </script>
+      <!-- Mouse Event Jquery leave event start-->
+     <script>
+      $(document).ready(function(){
+        $("#p2").mouseleave(function(){
+          alert("Bye !! You leave p2!");
+        });
+      });
+     </script>
+      <!-- Mouse Event Jquery down event start-->
+      <script>
+      $(document).ready(function(){
+        $("#p3").mousedown(function(){
+          alert("You pressed down on p3");
+        });
+      });
+      </script>
+      <!-- Mouse Event Jquery up over event start-->
+      <script>
+      $(document).ready(function(){
+        $("#p4").mouseup(function(){
+          alert("Mouse up over p4!");
+        });
+      });
+      </script>
+       <!-- Mouse Event Jquery hover event start-->
+       <script>
+      $(document).ready(function(){
+        $("#p5").hover(function(){
+          alert("You entered p5");
+        },function(){
+          alert("Bye !! You leave p5");
+        });
+      });
+       </script>
+        <!-- Mouse Event Jquery focus&blur event start-->
+        <script>
+          $(document).ready(function(){
+            $("input").focus(function(){
+              $("input").css("background-color","#148F77");
+            });
+            $("input").blur(function(){
+              $("input").css("background-color","#7D3C98");
+            });
+          });
+        </script>
+
+        <script>
+          $(document).ready(function(){
+            $("p").on("click", function(){
+              $(this).hide();
+            });
+          });
+        </script>
+
+        <!-- Jquery Keyboard Event-->
+        <script>
+          $(document).ready(function(){
+            $('#inp1').focus(function(){
+              alert("You entered Data");
+            });
+            $('#inp2').blur(function(){
+              alert("You left Data");
+            });
+            $('#inp3').keypress(function(){
+              alert("You pressed a key");
+            });
+            $('#inp4').keydown(function(){
+              alert("You pressed a key");
+            });
+            $('#inp5').keyup(function(){
+              alert("You pressed a keyup");
+            });
+            $('#inp6').keydown(function(){
+              alert("You pressed a keydown");
+            });
+          });
+        </script>
+        <!--Jquery Selectors & Fading effects-->
+        <script>
+          $(document).ready(function(){
+            $("#btn1").click(function(){
+              $("p").hide();
+            });
+            $("#btn2").click(function(){
+              $("p").show();
+            });
+            $("#btn3").click(function(){
+              $("p").toggle();
+            });
+            $("#btn4").click(function(){
+              $("p").fadeOut();
+            });
+            $("#btn5").click(function(){
+              $("p").fadeIn();
+            });
+            $("#btn6").click(function(){
+              $("p").fadeToggle();
+            });
+          });
+        </script>
+        <script>
+          $(document).ready(function(){
+            $("#btn1").click(function(){
+              $("p").hide();
+            });
+            $("#btn2").click(function(){
+              $("p").show();
+            });
+            $("#btn3").click(function(){
+              $("p").toggle();
+            });
+            $("#btn4").click(function(){
+              $("p").fadeOut();
+            });
+            $("#btn5").click(function(){
+              $("p").fadeIn();
+            });
+            $("button").click(function(){
+              $("#btn6").fadeToggle();
+            });
+          });
+        </script>
+        
+        <!-- Jquery Slide down and slide up-->
+        <script>
+          $(document).ready(function(){
+            $('.div2').click(function(){
+              $('button').click(function(){
+                $('#para1').slideDown();
+              });
+              $('button').click(function(){
+                $('#para2').slideUp();
+              });
+              $('button').click(function(){
+                $('#para3').slideToggle();
+              });
+            });
+          });
+        </script>
+        <script>
+          $(document).ready(function(){
+            $('#head_text').click(function(){
+              $('#text_div').slideToggle();
+            });
+          });
+        </script>
+        
+        <style>
+          #head_text{
+            background-color: #148F77;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100px;
+            text-align: center;
+            height: 15px;
+          }
+          #text_div{
+            background-color: #7D3C98;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            display: none;
+            border-radius: 5px;
+            width: 150px;
+            
+          }
+        </style>
+     
+</head>
+<body>
+    <h1> Inline Jquery Testing </h1><br>
+    <p> This is paragraph </p>
+    <button class="btn1"> Fade Out </button>
+    <button class="btn2"> Fade In </button>
+    <div>Test</div><br>
+    <button>Click</button>
+    <h4> Jquery Mouse Event Start here </h4><br>
+    <p class="text2"><b> Mouse event hide click Function</b></p><br>
+    
+    <p>If you click on me, I will disappear.</p><br>
+    <p>Click me away!</p><br>
+    <p>Click me too!</p><br>
+
+    <p class="text3"><b> Mouse event hide dblclick Function</b></p><br>
+
+    <p>If you click on me, I will disappear.</p><br>
+    <p>Click me away!</p><br>
+    <p>Click me too!</p><br>
+    
+    <p class="test4"><b>Mouse enter alert jquery Function</b></p><br>
+    <p id="p1"> Enter this paragraph </p><br>
+    <p class="test4"><b>Mouse leave alert jquery Function</b></p><br>
+    <p id="p2"> Leave this paragraph </p><br>
+    <p class="test4"><b>Mouse down alert jquery Function</b></p><br>
+    <p id="p3">Mouse down paragraph.</p><br>
+    <p class="test4"><b>Mouse up over alert jquery Function</b></p><br>
+    <p id="p4">Mouse up over paragraph.</p><br>
+    <p class="test4"><b>Mouse hover alert jquery Function</b></p><br>
+    <p id="p5">Mouse up over paragraph.</p><br>
+    <p class="test4"><b>Mouse focus&blur alert jquery Function</b></p><br>
+    Name:<input type="text" name="FullName"><br>
+    Email:<input type="text" name="email"><br>
+
+    <p class="test4"><b>Mouse on hide jquery Function</b></p><br>
+    <p id="p6">Mouse on over paragraph.</p><br>
+    <p>If you click on me, I will disappear.</p><br>
+    <p>Click me away!</p><br>
+    <p>Click me too!</p><br>
+    <form>
+      <label> First Name </label>
+      <input type="text" id="inp1"><br>
+      <label> Last Name </label>
+      <input type="text" id="inp2"><br>
+      <label> New input </label>
+      <input type="text" id="inp3"><br>
+      <label> New input1</label>
+      <input type="text" id="inp4"><br>
+      <label> New input2</label>
+      <input type="text" id="inp5"><br>
+      <label> New input3</label>
+      <input type="text" id="inp6"><br>
+    </form><br>
+   <div class="div1">
+    <p> Hide the paragraph </p><br>
+    <p id="btn1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
+    <p> show the paragraph </p><br>
+    <p id="btn2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
+    <p> Toggle the paragraph </p><br>
+    <p id="btn3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
+    <p> fadeout the paragraph </p><br>
+    <p id="btn4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
+    <p> fadeIn the paragraph </p><br>
+    <p id="btn5">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
+    <p> fadeToggle the paragraph </p><br>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
+    <button id="btn6"> Click Here</button><br>
+   </div><br>
+   <div class="div2">
+    <p id="para1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p><br>
+    <button> Slide Down</button><br>
+    <p id="para2">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><br>
+    <button> Slide Up</button><br>
+    <p id="para3"> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><br>
+    <button> Click here</button><br>
+    
+   </div><br>
+
+   <div id="head_text"> click here </div><br>
+   <div id="text_div">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div><br>
+   
+</body>
+</html>

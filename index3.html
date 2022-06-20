@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy Javascript & Jquery Testing</title>
+    <!-- External Jquery Link Code -->
+    <script src="\My work\JavaScript testing by umdy\Javascript-22\Javascript Day-2\jquery\jquery.js"></script>
+    
+    <!-- Jquery insert Adding Method-->
+  <script>
+    $(document).ready(function(){
+        // Prepend all paragraphs on document ready
+        $("p").prepend("<strong>Note:</strong> ");
+        
+        // Prepend a div container on button click
+        $("button").click(function(){
+           $("#container").prepend("This is demo text.");
+        });
+    });
+  </script>
+</head>
+<body>
+    <button type="button">Insert Text</button>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
+        <p>Quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti.</p>
+    </div>
+</body>
+</html>

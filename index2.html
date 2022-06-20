@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy Javascript & Jquery Testing</title>
+    <!-- External Javascript Link Code-->
+    <script src="\My work\JavaScript testing by umdy\Javascript-22\Javascript Day-2\js\Script1.js"></script>
+    <!-- External Jquery Link Code -->
+    <script src="\My work\JavaScript testing by umdy\Javascript-22\Javascript Day-2\jquery\jquery.js"></script>
+     <!-- External Jquery color Link-->
+   <script src="\My work\JavaScript testing by umdy\Javascript-22\Javascript Day-2\jquery\jquery.color.js"></script>
+
+   <!--Jquery Animation effect-->
+   <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        var div = $("#test_div1");
+        div.animate({height: '300px', opacity: '0.4'}, "slow");
+        div.animate({width: '300px', opacity: '0.8'}, "slow");
+        div.animate({height: '100px', opacity: '0.4'}, "slow");
+        div.animate({width: '200px', opacity: '0.8'}, "slow");
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+          var div = $("#test_div1");  
+          div.animate({left: '100px'}, "slow");
+          div.animate({fontSize: '3em'}, "slow");
+        });
+      });
+  </script>
+  <style>
+    #test_div1{
+        background-color: #11eabfac;
+        height: 100px;
+        width: 200px;
+        position: absolute;
+      }
+    #test_div4{
+        background: orangered;
+        height: 200px;
+        width: 200px;
+        
+      }
+    
+  </style>
+  <!-- Jquery Chaining Method-->
+  <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $("#test_div2").click(function(){
+                $("#p1").css("color", "red")
+                .slideUp(2000)
+                .slideDown(2000);
+            });
+        });
+    });
+  </script>
+  <!-- Jquery Call back function-->
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#p2").hide("slow",function(){
+        //$("#p2").hide(1000);[another way to hide]
+          alert(" The Paragraph is now Hide!!");
+        });
+      });
+    });
+  </script>
+  <!-- Jquery Get Method-->
+  <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $.get("demo_test.aps", function(data, status){
+          alert("Data: " + data + "\nStatus: " + status);
+        });
+      });
+    });
+  </script>
+  <!-- Jquery set Method-->
+  <script>
+    $(document).ready(function(){
+      $("#test_div4").click(function(){
+        $(this).html(" This content is coming from<u>Jquery</u> or javascript");
+      });
+      $("#btn3").dblclick(function(){
+        var test_div3 = $("#test_div3").html();
+        $("#test_div4").html(test_div3);
+      });
+    });
+  </script>
+  
+</head>
+<body>
+  <button> Hide paragraph</button><br> 
+  <p id="p2">This is a paragraph with little content.               </p><br><br><br><br>
+  <button>Send an HTTP GET request to a page and get the result back</button><br><br><br><br>
+    <div id="test_div2">
+        <p id="p1"> Jquery is Fun!!</p><br> 
+        <button> Click Here </button>
+      </div><br><br><br><br><br><br>
+  <button> Start Animation </button><br>
+  <div id="test_div1"> Hello</div><br><br><br><br><br><br><br><br> 
+  <button id="btn3"> Click Here2 </button><br><br><br><br><br><br>
+  <div id="test_div3"> This is div3. Jquery is a <b>Library</b> of javascript</div>
+  <div id="test_div4"></div><br><br><br><br>
+ 
+  
+ 
+  
+</body>
+</html>
