@@ -1,0 +1,28 @@
+.para-style{
+    color:red;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+    background-color: darkseagreen;
+}
+
+.anim{
+    box-shadow: 0 15px 18px 0 tomato;
+    opacity: 0.5;
+}
+/* Chat GTP Code 
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+*/
